@@ -1,0 +1,54 @@
+---
+version: "3.9"
+services:
+  slurm_database:
+    image: mariadb:latest
+    hostname: slurm_database
+    container_name: slurm_database
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: slurm
+      MYSQL_USER: slurm
+      MYSQL_PASSWORD: slurm
+      MYSQL_INNODB_BUFFER_POOL_SIZE: 500M
+
+    volumes:
+      - db:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ['CMD', '/usr/local/bin/healthcheck.sh', '--connect']
+      interval: 2s
+      timeout: 2s
+      retries: 5
+    networks: [slurm]
+
+  slurm_compute_node:
+    # A single node instance of slurm (dbd, controller, worker)
+    build:
+      context: .
+    command: ["slurmd"]
+    hostname: slurm_compute_node
+    container_name: slurm_compute_node
+    depends_on:
+      slurm_database:
+        condition: service_healthy
+    volumes:
+      - munge:/etc/munge
+      - logs:/var/log/slurm
+      - jobdir:/opt/jobs
+      - "./slurm-node-entrypoint.sh:/usr/local/bin/entrypoint.sh"
+    expose:
+      - "6818"
+    networks: [slurm]
+
+volumes:
+  db:
+  munge:
+  logs:
+  jobdir:
+
+networks:
+  slurm:
+    name: slurm-in-docker

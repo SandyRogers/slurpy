@@ -1,0 +1,82 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="unicorn:model" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="div" />
+            <item index="7" class="java.lang.String" itemvalue="content-editable" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="3.10" />
+            <item index="1" class="java.lang.String" itemvalue="3.11" />
+            <item index="2" class="java.lang.String" itemvalue="3.12" />
+            <item index="3" class="java.lang.String" itemvalue="3.9" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="22">
+            <item index="0" class="java.lang.String" itemvalue="ena-api-handler" />
+            <item index="1" class="java.lang.String" itemvalue="django-ninja" />
+            <item index="2" class="java.lang.String" itemvalue="prefect" />
+            <item index="3" class="java.lang.String" itemvalue="pydantic" />
+            <item index="4" class="java.lang.String" itemvalue="django" />
+            <item index="5" class="java.lang.String" itemvalue="dj-database-url" />
+            <item index="6" class="java.lang.String" itemvalue="prefect-shell" />
+            <item index="7" class="java.lang.String" itemvalue="cython" />
+            <item index="8" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="9" class="java.lang.String" itemvalue="nextflowpy" />
+            <item index="10" class="java.lang.String" itemvalue="psycopg2-binary" />
+            <item index="11" class="java.lang.String" itemvalue="tzdata" />
+            <item index="12" class="java.lang.String" itemvalue="django-unfold" />
+            <item index="13" class="java.lang.String" itemvalue="whitenoise" />
+            <item index="14" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="15" class="java.lang.String" itemvalue="django-matomo" />
+            <item index="16" class="java.lang.String" itemvalue="pandas" />
+            <item index="17" class="java.lang.String" itemvalue="pydantic-settings" />
+            <item index="18" class="java.lang.String" itemvalue="django-ltree-2" />
+            <item index="19" class="java.lang.String" itemvalue="biopython" />
+            <item index="20" class="java.lang.String" itemvalue="django-debug-toolbar" />
+            <item index="21" class="java.lang.String" itemvalue="mysql-connector-python" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="object.get_context_data" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
