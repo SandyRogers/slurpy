@@ -1,4 +1,4 @@
-# Slurpy (SLUrm rest api PYthon client)
+# Slurpy (SLUrm Rest api PYthon client)
 Slurpy is a Python client for the [Slurm REST API](https://slurm.schedmd.com/rest.html).
 Slurm is an open-source job scheduler for high performance compute environments.
 Its REST API is a set of HTTP endpoints for submitting, monitoring, and managing compute jobs.
